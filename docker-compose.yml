@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  auto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    tty: true
+    stdin_open: true
+    ports:
+      - 8084:8084

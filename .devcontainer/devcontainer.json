@@ -1,0 +1,50 @@
+{
+  "name": "daily task web browser auto opreation env",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.yml"
+  ],
+  "service": "auto",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": null,
+    "autoDocstring.docstringFormat": "google",
+    "editor.formatOnSave": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "files.autoGuessEncoding": true,
+    "python.formatting.blackArgs": [
+      "--line-length",
+      "99"
+    ],
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.pythonPath": "/usr/bin/python",
+    "python.testing.pytestArgs": [
+      "tools",
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.languageServer": "Pylance",
+  },
+  "extensions": [
+    "MS-CEINTL.vscode-language-pack-ja",
+    "donjayamanne.githistory",
+    "njpwerner.autodocstring",
+    "ms-python.python",
+    "ms-azuretools.vscode-docker",
+    "mhutchie.git-graph",
+    "humao.rest-client",
+    "MS-CEINTL.vscode-language-pack-ja",
+    "GitHub.vscode-pull-request-github",
+    "redhat.vscode-yaml",
+    "ms-python.vscode-pylance",
+    "pkief.material-icon-theme"
+  ],
+  "postCreateCommand": "apt-get update && apt-get install -y git curl",
+}
